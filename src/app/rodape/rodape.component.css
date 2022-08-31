@@ -1,28 +1,31 @@
-ul.social-network{
+ul.social-network {
     list-style: nome;
     padding: 0%;
 }
 
-ul.social-network li{
+ul.social-network li {
     display: inline;
     margin: 0;
     padding: 5px;
 }
 
-.fa{
+.fa {
     font-size: 35pt;
     color: white;
     padding: 10px;
 }
 
-.fa-github-square:hover{
+.fa-github-square:hover {
     color: black;
 }
 
-.fa-instagram:hover{
-    color: #c43486;
+.fa-instagram:hover {
+    background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.fa-linkedin-square:hover{
+.fa-linkedin-square:hover {
     color: #0072b1;
 }
