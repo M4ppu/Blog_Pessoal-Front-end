@@ -19,18 +19,27 @@
 
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="usuario">Usuário: </label>
-                                    <span class="fa fa-envelope"></span>
-                                    <input [(ngModel)]="user.usuario" class="form-control" type="text" name="usuario"
-                                        id="usuario" placeholder="Seu e-mail">
+                                    <label for="nome">Sobrenome: </label>
+                                    <span class="fa fa-user"></span>
+                                    <input [(ngModel)]="user.sobrenome" class="form-control" type="text"
+                                        name="sobrenome" id="sobrenome" placeholder="Seu sobrenome">
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="usuario">Usuário: </label>
+                            <span class="fa fa-envelope"></span>
+                            <input [(ngModel)]="user.usuario" class="form-control" type="text" name="usuario"
+                                id="usuario" placeholder="Seu e-mail">
                         </div>
 
                         <div class="form-group">
                             <label for="foto">Link da foto: </label>
                             <span class="fa fa-camera"></span>
-                            <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto">
+                            <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto"
+                                placeholder="Link da foto">
                         </div>
 
                         <div class="row">
@@ -56,7 +65,8 @@
                         <div class="form-group">
                             <label for="tipoDeUsuario">Tipo de usuário: </label>
                             <span class="fa fa-cog"></span>
-                            <select [(ngModel)]="user.tipo" class="form-control" name="tipoUser" id="tipoUser" (change)="tipoUser($event)">
+                            <select [(ngModel)]="user.tipo" class="form-control" name="tipoUser" id="tipoUser"
+                                (change)="tipoUser($event)">
                                 <option>Selecione um tipo de usuário</option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Administrador</option>
@@ -64,13 +74,14 @@
                         </div>
                     </form>
 
-                    <p class="text-center fs-10 pt-4 small mb-5">Já possui uma conta? Faça o <a routerLink="/entrar">login</a></p>
+                    <p class="text-center fs-10 pt-4 small mb-5">Já possui uma conta? Faça o <a
+                            routerLink="/entrar">login</a></p>
 
                     <hr>
 
                     <div class="d-flex justify-content-center mt-5">
                         <button type="submit" class="btn btn-danger mr-4" (click)="cadastrar()">Cadastrar</button>
-                        <button type="submit" class="btn btn-dark" routerLink="/entrar">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-dark" routerLink="/entrar">Cancelar</button>
                     </div>
                 </div>
             </div>
