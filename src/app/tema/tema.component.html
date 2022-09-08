@@ -2,7 +2,7 @@
     <div class="row bg-secondary">
         <div class="col-md-12 text-white">
             <a routerLink="/inicio" class="txt-white text-left">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i> início
+                <i class="fa fa-angle-double-left text-white" aria-hidden="true"> Início</i> 
             </a>
             <h1 class="fs-54 text-center">Temas</h1>
             <h5 class="fs-18 text-center">Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
@@ -39,12 +39,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor='let tema of listaTemas'>
-                    <th>{{tema.id}}</th>
-                    <td>{{tema.descricao}}</td>
+                  <tr *ngFor='let item of listaTemas'>
+                    <th>{{item.id}}</th>
+                    <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <button class="btn btn-danger">Editar</button>
-                      <button class="btn btn-outline-dark ml-3">Apagar</button>
+                      <button class="btn btn-danger" [routerLink]="['/tema-edit', item.id]">Editar</button>
+                      <button class="btn btn-outline-dark ml-3" [routerLink]="['/tema-delete', item.id]">Apagar</button>
                     </td>
                   </tr>
                 </tbody>
