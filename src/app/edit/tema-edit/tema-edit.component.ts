@@ -41,5 +41,4 @@ export class TemaEditComponent implements OnInit {
       this.router.navigate(['/tema'])
     })
   }
-
 }

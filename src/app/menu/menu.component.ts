@@ -20,8 +20,6 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    console.log(this.nomeCompleto)
-    console.log(this.sobrenome)
   }
 
   sair(){
