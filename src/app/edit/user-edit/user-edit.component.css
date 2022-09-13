@@ -1,0 +1,11 @@
+span{
+    position: absolute;
+    margin-left: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: rgba(165, 42, 42, 0.579);
+}
+.form-group .form-control {
+    padding-left: 2.375rem;
+}

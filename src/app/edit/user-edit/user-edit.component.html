@@ -1,0 +1,85 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secdndary">Atualizar meu usuário</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+
+            <form class="mt-5 mb-1">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="nome">Nome: </label>
+                            <span class="fa fa-user"></span>
+                            <input [(ngModel)]="user.nome" class="form-control" type="text" name="nome"
+                                id="nome" placeholder="Seu nome">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="nome">Sobrenome: </label>
+                            <span class="fa fa-user"></span>
+                            <input [(ngModel)]="user.sobrenome" class="form-control" type="text"
+                                name="sobrenome" id="sobrenome" placeholder="Seu sobrenome">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="usuario">Usuário: </label>
+                    <span class="fa fa-envelope"></span>
+                    <input [(ngModel)]="user.usuario" class="form-control" type="text" name="usuario"
+                        id="usuario" placeholder="Seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="foto">Link da foto: </label>
+                    <span class="fa fa-camera"></span>
+                    <input [(ngModel)]="user.foto" class="form-control" type="text" name="foto" id="foto"
+                        placeholder="Link da foto">
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="senha">Senha: </label>
+                            <span class="fa fa-lock"></span>
+                            <input (input)="confirmSenha($event)" class="form-control" type="password"
+                                name="senha" id="senha" placeholder="Sua senha">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="confirmarSenha">Confirmar sua senha: </label>
+                            <span class="fa fa-lock"></span>
+                            <input [(ngModel)]="user.senha" class="form-control" type="password"
+                                name="confirmarSenha" id="confirmarSenha" placeholder="Confirmar sua senha">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoDeUsuario">Tipo de usuário: </label>
+                    <span class="fa fa-cog"></span>
+                    <select [(ngModel)]="user.tipo" class="form-control" name="tipoUser" id="tipoUser"
+                        (change)="tipoUser($event)">
+                        <option>Selecione um tipo de usuário</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <button type="submit" class="btn btn-danger mr-4" (click)="atualizar()">Atualizar</button>
+                <button type="submit" class="btn btn-outline-dark" routerLink="/inicio">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

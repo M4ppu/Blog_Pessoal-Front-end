@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   nome = environment.nome
   sobrenome = environment.sobrenome
   foto = environment.foto
+  id = environment.id
 
   nomeCompleto = `${environment.nome} ${environment.sobrenome}`
 
