@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { User } from '../model/User';
 import { UserLogin } from '../model/UserLogin';
 
@@ -14,22 +14,22 @@ export class AuthService {
   ) { }
   
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>(`${environment.url}/usuarios/logar`, userLogin)
   }
 
   cadastrar(user: User): Observable<User> {
-    return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user)
+    return this.http.post<User>(`${environment.url}/usuarios/cadastrar`, user)
   }
 
   atualizarUser(user: User): Observable<User> {
     var token = {
       headers: new HttpHeaders().set('Authorization', environment.token)
     }
-    return this.http.put<User>('http://localhost:8080/usuarios/atualizar', user, token)
+    return this.http.put<User>(`${environment.url}/usuarios/atualizar`, user, token)
   }
 
   getByIdUser(id: number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<User>(`${environment.url}/usuarios/${id}`)
   }
 
   logado(){
